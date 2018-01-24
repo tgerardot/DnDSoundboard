@@ -26,7 +26,7 @@ while page_number == 1:
 
 
 
-
+#test
 #while True:
 #    input_state = GPIO.input(18)
 #    if input_state == False:
