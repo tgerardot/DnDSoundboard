@@ -1,6 +1,8 @@
 import RPi.GPIO as GPIO
 import time
 import pygame
+pygame.mixer.init()
+
 
 GPIO.setmode(GPIO.BCM)
 
@@ -14,15 +16,17 @@ if page_number >= 2:
 
 while page_number == 0:
     if (GPIO.input(18) == False):
-             pygame.mixer.music.load('sounds/airhorn.mp3')
-			 pygame.mixer.music.play(0)
+             pygame.mixer.music.load('sounds/acid-splash.mp3')
+             pygame.mixer.music.play(0)
              page_number += 1
-			 time.sleep(0.2)
+             print (page_number)
+             time.sleep(0.2)
 
 while page_number == 1:
     if (GPIO.input(18) == False):
              pygame.mixer.music.load('sounds/airhorn.mp3')
-			 pygame.mixer.music.play(0)
+             pygame.mixer.music.play(0)
+             print (page_number)
              time.sleep(0.2)
              if page_number >= 2:
                  page_number = 0
