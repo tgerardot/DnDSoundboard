@@ -14,15 +14,18 @@ if page_number >= 2:
 
 while page_number == 0:
     if (GPIO.input(18) == False):
-             print('I am excited')
+             pygame.mixer.music.load('sounds/airhorn.mp3')
+			 pygame.mixer.music.play(0)
              page_number += 1
-             time.sleep(0.2)
+			 time.sleep(0.2)
 
 while page_number == 1:
     if (GPIO.input(18) == False):
-             print('I am bored now')
-             page_number += 1
+             pygame.mixer.music.load('sounds/airhorn.mp3')
+			 pygame.mixer.music.play(0)
              time.sleep(0.2)
+             if page_number >= 2:
+                 page_number = 0
 
 
 
