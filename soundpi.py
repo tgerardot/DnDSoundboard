@@ -16,7 +16,7 @@ if page_number >= 2:
 
 while page_number == 0:
     if (GPIO.input(18) == False):
-             pygame.mixer.music.load('sounds/acid-splash.mp3')
+             pygame.mixer.music.load('sounds/spells/acid-splash.mp3')
              pygame.mixer.music.play(0)
              page_number += 1
              print (page_number)
@@ -24,7 +24,7 @@ while page_number == 0:
 
 while page_number == 1:
     if (GPIO.input(18) == False):
-             pygame.mixer.music.load('sounds/airhorn.mp3')
+             pygame.mixer.music.load('sounds/misc/airhorn.mp3')
              pygame.mixer.music.play(0)
              print (page_number)
              time.sleep(0.2)
