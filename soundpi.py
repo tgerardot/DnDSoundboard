@@ -8,13 +8,13 @@ GPIO.setmode(GPIO.BCM)
 
 GPIO.setup(18, GPIO.IN, pull_up_down=GPIO.PUD_UP)
 
-page_number = 0
-print (page_number)
+category = 0
+print (category)
 
-if page_number >= 2:
-    page_number = 0
+if category >= 2:
+    category = 0
 
-while page_number == 0:
+while category == 0:
     if (GPIO.input(4) == False):
              pygame.mixer.music.load('sounds/misc/airhorn.mp3')
              pygame.mixer.music.play(0)
@@ -64,7 +64,7 @@ while page_number == 0:
              pygame.mixer.music.play(0)
              time.sleep(0.2)                                      
 
-while page_number == 1:
+while category == 1:
     if (GPIO.input(4) == False):
              pygame.mixer.music.load('sounds/battle/arrow-swoosh-hit.mp3')
              pygame.mixer.music.play(0)
@@ -113,8 +113,8 @@ while page_number == 1:
     #          pygame.mixer.music.load('sounds/battle/.mp3')
     #          pygame.mixer.music.play(0)
     #          time.sleep(0.2)
-             if page_number >= 2:
-                 page_number = 0
+             if category >= 2:
+                 category = 0
 
 
 
@@ -122,7 +122,7 @@ while page_number == 1:
 #while True:
 #    input_state = GPIO.input(18)
 #    if input_state == False:
-#        page_number += 1
+#        category += 1
 #        print('Button Pressed')
-#        print(page_number)
+#        print(category)
 #        time.sleep(0.2)
