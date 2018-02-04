@@ -37,14 +37,6 @@ if (GPIO.input(4) == False) and (GPIO.input(17) == False):
 while True:
     if (GPIO.input(21) == False):
         category += 1
-        if category == 0:
-            display.lcd_clear()
-            display.lcd_display_string("Category", 1)
-            display.lcd_display_string("General", 2)
-        if category == 1:
-            display.lcd_clear()
-            display.lcd_display_string("Category", 1)
-            display.lcd_display_string("Battle", 2)
         time.sleep(0.2)
     if category >= 2:
         category = 0
