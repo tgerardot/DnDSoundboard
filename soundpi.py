@@ -27,18 +27,21 @@ GPIO.setup(21, GPIO.IN, pull_up_down=GPIO.PUD_UP)
 
 category = 0
 print (category)
-if category >= 2:
-    category = 0
+
 
 if (GPIO.input(4) == False) and (GPIO.input(17) == False):
     display.lcd_display_string("Powering", 1) 
     display.lcd_display_string("Down....", 1) 
     os.system("sudo shutdown -h now")
 
-if (GPIO.input(21) == False):
+while True:
+    if (GPIO.input(21) == False):
     category += 1
     time.sleep(0.2)
+    if category >= 2:
+    category = 0
     print (category)
+
 
 display.lcd_display_string("Welcome to", 1) 
 display.lcd_display_string("D&D SoundPi", 2)
