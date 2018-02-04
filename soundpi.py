@@ -36,10 +36,10 @@ if (GPIO.input(4) == False) and (GPIO.input(17) == False):
 
 while True:
     if (GPIO.input(21) == False):
-    category += 1
-    time.sleep(0.2)
+        category += 1
+        time.sleep(0.2)
     if category >= 2:
-    category = 0
+        category = 0
     print (category)
 
 
