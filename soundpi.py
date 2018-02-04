@@ -37,22 +37,22 @@ if (GPIO.input(4) == False) and (GPIO.input(17) == False):
 
 category = 0
 print (category)    
+display.lcd_display_string("Welcome to", 1) 
+display.lcd_display_string("D&D SoundPi", 2)
+time.sleep(2)                            
+display.lcd_clear()    
+display.lcd_display_string("Press a Button", 1)
 
-while True:
-
-    display.lcd_display_string("Welcome to", 1) 
-    display.lcd_display_string("D&D SoundPi", 2)
-    time.sleep(2)                            
-    display.lcd_clear()    
-    display.lcd_display_string("Press a Button", 1)
-    
-    
+while True:    
     if category >= 2:
         category = 0
         
     while category == 0:
         if (GPIO.input(21) == False):
                  category += 1
+                 display.lcd_clear()
+                 display.lcd_display_string("Category Now", 1)
+                 display.lcd_display_string("Battle Sounds", 2)
                  time.sleep(0.2)
         if (GPIO.input(4) == False):
                  pygame.mixer.music.load('/home/DnDSoundboard/sounds/misc/airhorn.mp3')
@@ -139,6 +139,9 @@ while True:
     while category == 1:
         if (GPIO.input(21) == False):
                  category += 1
+                 display.lcd_clear()
+                 display.lcd_display_string("Category Now", 1)
+                 display.lcd_display_string("General", 2)
                  time.sleep(0.2)
         if (GPIO.input(4) == False):
                  pygame.mixer.music.load('/home/DnDSoundboard/sounds/battle/arrow-swoosh-hit.mp3')
