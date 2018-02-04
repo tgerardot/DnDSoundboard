@@ -35,26 +35,16 @@ if (GPIO.input(4) == False) and (GPIO.input(17) == False):
     display.lcd_display_string("Down....", 1) 
     os.system("sudo shutdown -h now")
 
-if (GPIO.input(20) == False):
-    category -= 1
-    time.sleep(0.2)
-    print (category)
 if (GPIO.input(21) == False):
     category += 1
     time.sleep(0.2)
     print (category)
-
-if category >= 2:
-    category = 0
-if category < 0:
-    category = 0
 
 display.lcd_display_string("Welcome to", 1) 
 display.lcd_display_string("D&D SoundPi", 2)
 time.sleep(2)                            
 display.lcd_clear()    
 display.lcd_display_string("Press a Button", 1)
-
 
 while category == 0:
     if (GPIO.input(4) == False):
@@ -124,7 +114,6 @@ while category == 0:
              display.lcd_display_string("Now Playing", 1)
              display.lcd_display_string("Zomb Group", 2)
              time.sleep(0.2)
-             display.lcd_clear()
     if (GPIO.input(19) == False):
              pygame.mixer.music.load('sounds/misc/zombie-hit.mp3')
              pygame.mixer.music.play(0)
