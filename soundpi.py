@@ -46,14 +46,14 @@ while True:
     display.lcd_clear()    
     display.lcd_display_string("Press a Button", 1)
     
-    if (GPIO.input(21) == False):
-        display.lcd_display_string("Bitch", 2)
-        #category += 1
-        #time.sleep(0.2)
+    
     if category >= 2:
         category = 0
         
     while category == 0:
+        if (GPIO.input(21) == False):
+                 category += 1
+                 time.sleep(0.2)
         if (GPIO.input(4) == False):
                  pygame.mixer.music.load('/home/DnDSoundboard/sounds/misc/airhorn.mp3')
                  pygame.mixer.music.play(0)
@@ -137,6 +137,9 @@ while True:
                  time.sleep(0.2)
 
     while category == 1:
+        if (GPIO.input(21) == False):
+                 category += 1
+                 time.sleep(0.2)
         if (GPIO.input(4) == False):
                  pygame.mixer.music.load('/home/DnDSoundboard/sounds/battle/arrow-swoosh-hit.mp3')
                  pygame.mixer.music.play(0)
