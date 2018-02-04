@@ -1,3 +1,5 @@
+#!/usr/bin/env python3
+
 import RPi.GPIO as GPIO
 import os
 import time
@@ -53,7 +55,7 @@ while True:
         
     while category == 0:
         if (GPIO.input(4) == False):
-                 pygame.mixer.music.load('sounds/misc/airhorn.mp3')
+                 pygame.mixer.music.load('/home/DnDSoundboard/sounds/misc/airhorn.mp3')
                  pygame.mixer.music.play(0)
                  display.lcd_clear()
                  display.lcd_display_string("Now Playing", 1)
