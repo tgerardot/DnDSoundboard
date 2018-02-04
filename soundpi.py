@@ -25,8 +25,7 @@ GPIO.setup(26, GPIO.IN, pull_up_down=GPIO.PUD_UP)
 GPIO.setup(20, GPIO.IN, pull_up_down=GPIO.PUD_UP)
 GPIO.setup(21, GPIO.IN, pull_up_down=GPIO.PUD_UP)
 
-category = 0
-print (category)
+
 
 
 if (GPIO.input(4) == False) and (GPIO.input(17) == False):
@@ -34,20 +33,24 @@ if (GPIO.input(4) == False) and (GPIO.input(17) == False):
     display.lcd_display_string("Down....", 1) 
     os.system("sudo shutdown -h now")
 
-while True:
-    if (GPIO.input(21) == False):
-        category += 1
-        time.sleep(0.2)
-    if category >= 2:
-        category = 0
+category = 0
+print (category)    
 
+while True:
 
     display.lcd_display_string("Welcome to", 1) 
     display.lcd_display_string("D&D SoundPi", 2)
     time.sleep(2)                            
     display.lcd_clear()    
     display.lcd_display_string("Press a Button", 1)
-
+    
+    if (GPIO.input(21) == False):
+        display.lcd_display_string("Bitch", 2)
+        #category += 1
+        #time.sleep(0.2)
+    if category >= 2:
+        category = 0
+        
     while category == 0:
         if (GPIO.input(4) == False):
                  pygame.mixer.music.load('sounds/misc/airhorn.mp3')
