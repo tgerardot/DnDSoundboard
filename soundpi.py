@@ -141,7 +141,7 @@ while True:
                  category += 1
                  display.lcd_clear()
                  display.lcd_display_string("Category Now", 1)
-                 display.lcd_display_string("General", 2)
+                 display.lcd_display_string("Wows", 2)
                  time.sleep(0.2)
         if (GPIO.input(4) == False):
                  pygame.mixer.music.load('/home/DnDSoundboard/sounds/battle/arrow-swoosh-hit.mp3')
@@ -203,15 +203,89 @@ while True:
         #          pygame.mixer.music.load('/home/DnDSoundboard/sounds/battle/.mp3')
         #          pygame.mixer.music.play(0)
         #          time.sleep(0.2)
+    while category == 2:
+        if (GPIO.input(21) == False):
+                 category += 1
+                 display.lcd_clear()
+                 display.lcd_display_string("Category Now", 1)
+                 display.lcd_display_string("General", 2)
+                 time.sleep(0.2)
+        if (GPIO.input(4) == False):
+                 pygame.mixer.music.load('/home/DnDSoundboard/sounds/wow/wow-1.mp3')
+                 pygame.mixer.music.play(0)
+                 display.lcd_clear()
+                 display.lcd_display_string("Now Playing", 1)
+                 display.lcd_display_string("Wow1", 2)
+                 time.sleep(0.2)
+        if (GPIO.input(17) == False):
+                 pygame.mixer.music.load('/home/DnDSoundboard/sounds/wow/wow-2.mp3')
+                 pygame.mixer.music.play(0)
+                 display.lcd_clear()
+                 display.lcd_display_string("Now Playing", 1)
+                 display.lcd_display_string("Wow2", 2)
+                 time.sleep(0.2)
+        if (GPIO.input(27) == False):
+                 pygame.mixer.music.load('/home/DnDSoundboard/sounds/wow/wow-3.mp3')
+                 pygame.mixer.music.play(0)
+                 display.lcd_clear()
+                 display.lcd_display_string("Now Playing", 1)
+                 display.lcd_display_string("Wow3", 2)
+                 time.sleep(0.2)
+        if (GPIO.input(22) == False):
+                 pygame.mixer.music.load('/home/DnDSoundboard/sounds/wow/wow-4.mp3')
+                 pygame.mixer.music.play(0)
+                 display.lcd_clear()
+                 display.lcd_display_string("Now Playing", 1)
+                 display.lcd_display_string("Wow4", 2)
+                 time.sleep(0.2)
+        if (GPIO.input(10) == False):
+                 pygame.mixer.music.load('/home/DnDSoundboard/sounds/wow/wow-5.mp3')
+                 pygame.mixer.music.play(0)
+                 display.lcd_display_string("Now Playing", 1)
+                 display.lcd_display_string("Wow5", 2)
+                 time.sleep(0.2)
+        if (GPIO.input(9) == False):
+                 pygame.mixer.music.load('/home/DnDSoundboard/sounds/wow/wow-6.mp3')
+                 pygame.mixer.music.play(0)
+                 display.lcd_display_string("Now Playing", 1)
+                 display.lcd_display_string("Wow6", 2)
+                 time.sleep(0.2)                                                                 
+        if (GPIO.input(11) == False):
+                 pygame.mixer.music.load('/home/DnDSoundboard/sounds/wow/wow-7.mp3')
+                 pygame.mixer.music.play(0)
+                 display.lcd_display_string("Now Playing", 1)
+                 display.lcd_display_string("Wow7", 2)
+                 time.sleep(0.2)
+        if (GPIO.input(5) == False):
+                 pygame.mixer.music.load('/home/DnDSoundboard/sounds/wow/wow-8.mp3')
+                 pygame.mixer.music.play(0)
+                 display.lcd_display_string("Now Playing", 1)
+                 display.lcd_display_string("Wow8", 2)
+                 time.sleep(0.2)
+        if (GPIO.input(6) == False):
+                 pygame.mixer.music.load('/home/DnDSoundboard/sounds/wow/wow-9.mp3')
+                 pygame.mixer.music.play(0)
+                 display.lcd_display_string("Now Playing", 1)
+                 display.lcd_display_string("Wow9", 2)
+                 time.sleep(0.2)
+        if (GPIO.input(13) == False):
+                 pygame.mixer.music.load('/home/DnDSoundboard/sounds/wow/wow-10.mp3')
+                 pygame.mixer.music.play(0)
+                 display.lcd_display_string("Now Playing", 1)
+                 display.lcd_display_string("Wow10", 2)
+                 time.sleep(0.2)
+        if (GPIO.input(19) == False):
+                 pygame.mixer.music.load('/home/DnDSoundboard/sounds/wow/wow-11.mp3')
+                 pygame.mixer.music.play(0)
+                 display.lcd_display_string("Now Playing", 1)
+                 display.lcd_display_string("Wow11", 2)
+                 time.sleep(0.2)
+        if (GPIO.input(26) == False):
+                 pygame.mixer.music.load('/home/DnDSoundboard/sounds/wow/wow-12.mp3')
+                 pygame.mixer.music.play(0)
+                 display.lcd_display_string("Now Playing", 1)
+                 display.lcd_display_string("Wow12", 2)
+                 time.sleep(0.2)
+        
 
-
-
-    #test
-    #while True:
-    #    input_state = GPIO.input(18)
-    #    if input_state == False:
-    #        category += 1
-    #        print('Button Pressed')
-    #        print(category)
-    #        time.sleep(0.2)
 
