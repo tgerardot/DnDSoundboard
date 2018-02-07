@@ -3,6 +3,7 @@
 import RPi.GPIO as GPIO
 import os
 import time
+import lcddriver
 
 gpio_pin_number=21
 GPIO.setmode(GPIO.BCM)
