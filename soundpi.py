@@ -35,8 +35,6 @@ display.lcd_display_string("D&D SoundPi", 2)
 time.sleep(2)                            
 display.lcd_clear()    
 display.lcd_display_string("Press a Button", 1)
-time.sleep(5)
-display.lcd_display_string(".....Bitch", 2)
 
 while True:    
     if category >= 5:
@@ -100,6 +98,7 @@ while True:
         if (GPIO.input(5) == False):
                  pygame.mixer.music.load('/home/DnDSoundboard/sounds/misc/phantom.mp3')
                  pygame.mixer.music.play(0)
+                 display.lcd_clear()
                  display.lcd_display_string("Now Playing", 1)
                  display.lcd_display_string("Phantom", 2)
                  time.sleep(0.2)
@@ -113,23 +112,24 @@ while True:
         if (GPIO.input(13) == False):
                  pygame.mixer.music.load('/home/DnDSoundboard/sounds/misc/zombie-crowd.mp3')
                  pygame.mixer.music.play(0)
+                 display.lcd_clear()
                  display.lcd_display_string("Now Playing", 1)
                  display.lcd_display_string("Zomb Group", 2)
                  time.sleep(0.2)
-        if (GPIO.input(19) == False):
-                 pygame.mixer.music.load('/home/DnDSoundboard/sounds/misc/zombie-hit.mp3')
-                 pygame.mixer.music.play(0)
-                 display.lcd_clear()
-                 display.lcd_display_string("Now Playing", 1)
-                 display.lcd_display_string("Zombie Hit", 2)
-                 time.sleep(0.2)
-        if (GPIO.input(26) == False):
-                 pygame.mixer.music.load('/home/DnDSoundboard/sounds/misc/zombie-hit.mp3')
-                 pygame.mixer.music.play(0)
-                 display.lcd_clear()
-                 display.lcd_display_string("Now Playing", 1)
-                 display.lcd_display_string("Zombie hit?", 2)
-                 time.sleep(0.2)
+#        if (GPIO.input(19) == False):
+#                 pygame.mixer.music.load('/home/DnDSoundboard/sounds/misc/zombie-hit.mp3')
+#                 pygame.mixer.music.play(0)
+#                 display.lcd_clear()
+#                 display.lcd_display_string("Now Playing", 1)
+#                 display.lcd_display_string("Zombie Hit", 2)
+#                 time.sleep(0.2)
+#        if (GPIO.input(26) == False):
+#                 pygame.mixer.music.load('/home/DnDSoundboard/sounds/misc/zombie-hit.mp3')
+#                 pygame.mixer.music.play(0)
+#                 display.lcd_clear()
+#                 display.lcd_display_string("Now Playing", 1)
+#                 display.lcd_display_string("Zombie hit?", 2)
+#                 time.sleep(0.2)
 
     while category == 1:
         if (GPIO.input(21) == False):
@@ -209,7 +209,7 @@ while True:
                  display.lcd_display_string("Quarterstaff", 2)
                  time.sleep(0.2)
         if (GPIO.input(19) == False):
-                 pygame.mixer.music.load('/home/DnDSoundboard/sounds/battle/sword_hit_x3.mp3')
+                 pygame.mixer.music.load('/home/DnDSoundboard/sounds/battle/sword_hit_3x.mp3')
                  pygame.mixer.music.play(0)
                  display.lcd_clear()
                  display.lcd_display_string("Now Playing", 1)
